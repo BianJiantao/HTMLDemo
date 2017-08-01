@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!--根据设备尺寸约束 window 大小-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Just For Fun!</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+<!--导航-->
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">新世界を創ろうぜ</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">水星 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">金星</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">地球 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">天空</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">陸地</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">海洋</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">について</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!--焦点图(图片轮播)-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!--指示器 -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="images/nav_01.jpg" alt="1">
+        </div>
+        <div class="item">
+            <img src="images/nav_02.jpg" alt="2">
+        </div>
+        <div class="item">
+            <img src="images/nav_03.jpg" alt="3">
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">上一张</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">下一张</span>
+    </a>
+</div>
+
+<!--主要内容-->
+<div id="content">
+    <!--中间内容-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-circle" src="images/sky.jpg">
+                <h2>青空</h2>
+                <p>青空（あおぞら）は、晴れた日中の空を指し、転じて「青空市場」「青空教室」のように屋根が無い、戸外、野外などを意味する</p>
+                <button class="btn btn-default">GO !</button>
+            </div>
+            <div class="col-md-4">
+                <img class="img-circle" src="images/land.jpg">
+                <h2>陸地</h2>
+                <p>陸（りく、おか）とは、地球では、地表の恒常的に水で覆われていない部分、あるいは固体の水（氷雪）に覆われているが、その直下に液体の水が恒常的に存在しない部分をいう</p>
+                <button class="btn btn-default">GO !</button>
+            </div>
+            <div class="col-md-4">
+                <img class="img-circle" src="images/sea.jpg">
+                <h2>海洋</h2>
+                <p>海（うみ）は、地球の陸地以外の部分で、塩水に満ちているところのことである。</p>
+                <button class="btn btn-default">GO !</button>
+            </div>
+        </div>
+    </div>
+    <!--标签介绍页面-->
+    <div id="tab">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">青空</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">陸地</a></li>
+            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">海洋</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2>青空<span class="text-muted"> SKY</span></h2>
+                        <p class="lead">青空（あおぞら）は、晴れた日中の空を指し、転じて「青空市場」「青空教室」のように屋根が無い、戸外、野外などを意味する。
+                            詳細は「空」を参照.「蒼空」「蒼穹」「碧空」などと表記し「あおぞら」と読むものについては関連項目を参照のこと。</p>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="images/sky.jpg" class="img-responsive img-circle">
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="images/land.jpg" class="img-responsive img-circle">
+                    </div>
+                    <div class="col-md-7">
+                        <h2>陸地<span class="text-muted"> LAND</span></h2>
+                        <p class="lead">陸には、硯の墨をする部分や、銭湯などの流し場の意味も持つ。また、「陸へ上がった河童」といえば、普段と勝手が違い、本領が発揮できないことの形容である。「陸の孤島」とは、陸続きではあるが、交通の便などの問題から、孤立している場所（鉄道空白地帯など）を指す。数字の6の大字も「陸」である。「くが」と読めば雅語になるが、意味は一緒である。陸上自衛隊や陸奥の国の略称として用いられることもある。人名としても用いられる（恩田陸など）。</p>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="messages">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2>海洋<span class="text-muted"> SEA</span></h2>
+                        <p class="lead">海は地表の70.8%を占め、これらは全てつながっている。他にも、地表のごく小さい面積が塩水や淡水で覆われるが、これらは海には含めない。海の面積は約3億6106万km2で、陸地の面積の約1億4889万km2と対比すると、2.42倍である。平均的な深さは3729m。海水の総量は約13億4993万立方キロメートルにのぼる</p>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="images/sea.jpg" class="img-responsive img-circle">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--分割线-->
+<hr class="divider">
+
+<!--尾部-->
+<footer id="footer">
+    <p class="pull-right">
+        <a href="#">上部に戻る</a>
+    </p>
+    <p style="float: left">
+        &copy;2017 新世界から
+    </p>
+</footer>
+
+<!--弹出框-->
+<div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">新たな世界</h4>
+            </div>
+            <div class="modal-body">
+                <p>素晴らしい世界だな&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                <button type="button" class="btn btn-primary">確定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="bootstrap/js/jquery-1.11.3.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
